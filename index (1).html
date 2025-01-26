@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .bounce-in {
+            animation: bounceIn 1s ease-in-out;
+        }
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .special-font {
+            font-family: 'Pacifico', cursive;
+        }
+        .button-animate {
+            animation: buttonAnimate 1s infinite;
+        }
+        @keyframes buttonAnimate {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-4">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-4xl font-bold mb-6 text-center text-purple-700 bounce-in special-font">Online Resume Builder</h1>
+            <form id="resumeForm" class="space-y-6">
+                <div class="fade-in">
+                    <label for="fullName" class="block text-lg font-medium text-purple-700 special-font">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                </div>
+                <div class="fade-in">
+                    <label for="email" class="block text-lg font-medium text-purple-700 special-font">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                </div>
+                <div class="fade-in">
+                    <label for="phone" class="block text-lg font-medium text-purple-700 special-font">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                </div>
+                <div class="fade-in">
+                    <label for="address" class="block text-lg font-medium text-purple-700 special-font">Address</label>
+                    <input type="text" id="address" name="address" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                </div>
+                <div class="fade-in">
+                    <label for="summary" class="block text-lg font-medium text-purple-700 special-font">Professional Summary</label>
+                    <textarea id="summary" name="summary" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="education" class="block text-lg font-medium text-purple-700 special-font">Education</label>
+                    <textarea id="education" name="education" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="experience" class="block text-lg font-medium text-purple-700 special-font">Work Experience</label>
+                    <textarea id="experience" name="experience" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="skills" class="block text-lg font-medium text-purple-700 special-font">Skills</label>
+                    <textarea id="skills" name="skills" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="certifications" class="block text-lg font-medium text-purple-700 special-font">Certifications</label>
+                    <textarea id="certifications" name="certifications" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="languages" class="block text-lg font-medium text-purple-700 special-font">Languages</label>
+                    <textarea id="languages" name="languages" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="projects" class="block text-lg font-medium text-purple-700 special-font">Projects</label>
+                    <textarea id="projects" name="projects" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" required></textarea>
+                </div>
+                <div class="fade-in">
+                    <label for="photo" class="block text-lg font-medium text-purple-700 special-font">Upload Photo</label>
+                    <input type="file" id="photo" name="photo" class="w-full p-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" accept="image/*" required>
+                </div>
+                <div class="text-center fade-in">
+                    <button type="submit" class="bg-purple-500 text-white px-6 py-3 rounded-md hover:bg-purple-600 button-animate">Generate Resume</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('resumeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would typically send the form data to your server or AI model
+            alert('Resume generated successfully!');
+        });
+    </script>
+</body>
+</html>
